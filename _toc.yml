@@ -1,0 +1,14 @@
+# Table of contents
+# ------------------
+format: jb-book
+root: notebooks/introduction
+parts: 
+  - caption: Probability, statistics, and information theory
+    chapters:
+    - file: notebooks/exercises-psi
+  - caption: Optimization
+    chapters:
+    - file: notebooks/exercises-optimization
+  - caption: Analysis 
+    chapters:
+    - file: notebooks/exercises-analysis

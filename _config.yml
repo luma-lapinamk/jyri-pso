@@ -1,0 +1,26 @@
+# Book settings
+# -------------
+title: Probability, Statistics, and Optimization
+author: LUMA-team, Lapland UAS / Jyri Kivinen
+copyright: "2022"
+logo: images/logo.png
+
+# Execution settings
+# -------------------
+execute:
+  execute_notebooks: off
+
+# GitHub-settings
+# ----------------
+repository:
+  url: https://github.com/luma-lapinamk/jyri-pso
+  branch: master
+
+# HTML-settings and launch buttons
+# ---------------------------------
+html:
+  use_issues_button: false
+  use_repository_button: true
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  binderhub_url: ""
