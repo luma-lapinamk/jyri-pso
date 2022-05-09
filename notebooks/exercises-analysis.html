@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises: Analysis &#8212; Probability, Statistics, and Optimization</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Exercise tasks: Optimization" href="exercises-optimization.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Probability, Statistics, and Optimization</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Probability, statistics, and information theory
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises-psi.html">
+   Exercises: Probability, statistics, and information theory
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises-optimization.html">
+   Exercise tasks: Optimization
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exercises: Analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/exercises-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luma-lapinamk/jyri-pso"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luma-lapinamk/jyri-pso/blob/master/notebooks/exercises-analysis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercises: Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression">
+   Logistic regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-0-get-and-import-needed-helper-code">
+     Task 0: get and import needed helper code
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1-dataset-creation">
+     Task 1: Dataset creation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2-dataset-splitting-for-development-and-testing">
+     Task 2: Dataset splitting for development and testing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3-optimization-of-model-parameter-values">
+     Task 3: Optimization of model parameter values
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4-model-testing-and-tweaking">
+     Task 4: Model testing (and tweaking)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises: Analysis</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercises: Analysis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression">
+   Logistic regression
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-0-get-and-import-needed-helper-code">
+     Task 0: get and import needed helper code
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1-dataset-creation">
+     Task 1: Dataset creation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2-dataset-splitting-for-development-and-testing">
+     Task 2: Dataset splitting for development and testing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3-optimization-of-model-parameter-values">
+     Task 3: Optimization of model parameter values
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4-model-testing-and-tweaking">
+     Task 4: Model testing (and tweaking)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="exercises-analysis">
+<h1>Exercises: Analysis<a class="headerlink" href="#exercises-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Instructions: Use Google Colab to run the notebook; click the rocket-icon and choose Colab. Submit the completed notebook as instructed in the course.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="logistic-regression">
+<h1>Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h1>
+<p>We consider two-dimensional data classification onto two classes with a logistic regression model.</p>
+<p>The logistic regression model with parameters <span class="math notranslate nohighlight">\(\theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2\)</span>, and <span class="math notranslate nohighlight">\(T\)</span>, classifies a datapoint <span class="math notranslate nohighlight">\((x_1, x_2)\)</span>
+onto class ‘positive’ (<span class="math notranslate nohighlight">\(Y=1\)</span>) or class ‘negative’ (<span class="math notranslate nohighlight">\(Y=0\)</span>):</p>
+<ul class="simple">
+<li><p>‘positive’: <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2)\geq T\)</span>,</p></li>
+<li><p>‘negative’: <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2) &lt; T\)</span>,</p></li>
+</ul>
+<p>where <span class="math notranslate nohighlight">\(p(Y=y | x_1, x_2, \theta_1, \theta_2) = \rm{Bernoulli}(y; \text{logistic_sigmoid}\left(-\theta_1 x_1-\theta_2 x_2 \right))\)</span>,
+and so <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2)=\left(1+\exp{\left(-\theta_1 x_1-\theta_2 x_2 \right)}\right)^{-1}\)</span>.</p>
+<p>The decision boundary can be then mathematically expressed with the equation <span class="math notranslate nohighlight">\(\left(1+\exp{\left(-\theta_1 x_1-\theta_2 x_2 \right)}\right)^{-1}=T\)</span>, where the classification threshold <span class="math notranslate nohighlight">\(T\in (0, 1)\)</span>.</p>
+<p>With a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(
+x_2 = -\frac{\theta_1}{\theta_2}x_1-\frac{\ln{\left(\frac{1-T}{T}\right)}}{\theta_2}=-\frac{\theta_1}{\theta_2}x_1+\frac{\ln{\left(\frac{T}{1-T}\right)}}{\theta_2}\)</span>,
+so we can see that the boundary is a line where <span class="math notranslate nohighlight">\(-\frac{\theta_1}{\theta_2}\)</span> is slope and <span class="math notranslate nohighlight">\(\frac{\ln{\left(\frac{T}{1-T}\right)}}{\theta_2}\)</span> intercept.</p>
+<p>In the notebook below, we:</p>
+<ol class="simple">
+<li><p>create a dataset with 2D-data coming from two different classes (‘positive’, ‘negative’)</p></li>
+<li><p>split the dataset onto three sets: training, validation, and test</p></li>
+<li><p>optimize model parameter values using an optimization scheme</p></li>
+<li><p>test (&amp; tweak) the optimized model</p></li>
+</ol>
+<p>Your task is to study the procedure, the effect of the parameters that are varied using the interactive controls, and answer
+the questions.</p>
+<div class="section" id="task-0-get-and-import-needed-helper-code">
+<h2>Task 0: get and import needed helper code<a class="headerlink" href="#task-0-get-and-import-needed-helper-code" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone https://github.com/luma-lapinamk/jyri-pso.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;/jyri-pso/code&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">helpers_analysis</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="task-1-dataset-creation">
+<h2>Task 1: Dataset creation<a class="headerlink" href="#task-1-dataset-creation" title="Permalink to this headline">¶</a></h2>
+<p>Executing the cell below creates an interactive plot to create a daset. The probability density of values for data coming from a class is represented with a bivariate normal (Gaussian) distribution with “spherical covariance”.</p>
+<p>Properties that can be interactively changed:</p>
+<ul class="simple">
+<li><p>num_positives: Amount of examples from class ‘positive’ (triangles, red)</p></li>
+<li><p>num_negatives: Amount of examples from class ‘negative’ (circles, blue)</p></li>
+<li><p>positives_mean: Mean vector of the Gaussian for the positive class</p></li>
+<li><p>positives_scale: Standard deviations of the Gaussian for the positive class; same along both dimensions, no correlation</p></li>
+<li><p>negatives_mean: Mean vector of the Gaussian for the negative class</p></li>
+<li><p>negatives_scale: Standard deviations of the Gaussian for the negative class; same along both dimensions, no correlation</p></li>
+</ul>
+<p>Press the ‘Run Interact’-button to create (sample) and plot a dataset; note that the results change for different runs with fixed interaction parameter values, a different data sampling for each run. Study the interaction parameters and when varying them, think about the case of classification that is faced, decision boundary that is to separate the classes is a line. Construct a dataset for which there are expected to be clear classification errors, but also for which the classification is expected to be able to be clearly better than the method of randomly guessing. Once you are happy with the dataset, execute also the cell below it to extract the data from the interactive plot instance.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell i) how should the amount of examples (samples) contribute to the classification performance of new, unseen data from the sources, ii) the effect of considering mistakes under a class being worse than in the other, to the classifier properties, and iii) the parameter values that you chose.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">setup_dataset_interactively</span><span class="p">()</span>
+<span class="n">interactive_plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">positives</span><span class="p">,</span> <span class="n">num_positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">,</span> <span class="n">num_negatives</span> <span class="o">=</span> <span class="n">interactive_plot</span><span class="o">.</span><span class="n">result</span> <span class="c1"># extract the data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="answer">
+<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-2-dataset-splitting-for-development-and-testing">
+<h2>Task 2: Dataset splitting for development and testing<a class="headerlink" href="#task-2-dataset-splitting-for-development-and-testing" title="Permalink to this headline">¶</a></h2>
+<p>Executing the cell below creates an interactive plot to split the daset onto training, validation, and test portions.</p>
+<p>Properties that can be interactively changed:</p>
+<ul class="simple">
+<li><p>split_ratio_dev: Rate of the total amount training and validation examples to the amount of test examples (num_train+num_validation:num_test)</p></li>
+<li><p>split_ratio_trainval: Rate of the amount of training examples to the amount of validation examples (num_train:num_validation)</p></li>
+</ul>
+<p>Press the ‘Run Interact’-button to create the splits, and also to create a visualization; note that the results do not change for a different run with the same interaction parameter values. In the visualization one visualizes the objective function that is used in gradient-based optimization of model parameter values (<span class="math notranslate nohighlight">\(\text{parameter 1}=\theta_1\)</span>,
+<span class="math notranslate nohighlight">\(\text{parameter 2}=\theta_2\)</span>), under the training data and under the validation data; the objective function is the negative log-likelihood of data under the model: <span class="math notranslate nohighlight">\(-\sum_{n=1}^{N}\log p(Y=y^{(n)}|x_{1}^{(n)}, x_{2}^{(n)}, \theta_1, \theta_2)\)</span>, where <span class="math notranslate nohighlight">\((x_{1}^{(n)}, x_{2}^{(n)})\)</span> are the coordinates of the n<span class="math notranslate nohighlight">\(^{\text{th}}\)</span> datapoint and <span class="math notranslate nohighlight">\(y^{(n)}\)</span> is the corresponding class.</p>
+<p>Study the effect of the interactive plot parameter values to the visualization. Once you are happy with their values, execute also the cell below it to extract the data from the interactive cell. In the ‘Answer’-section, briefly describe in the empty cell i) how one could expect to see differences, ii) differences observed if any, and iii) the parameter values that you chose.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot2</span> <span class="o">=</span> <span class="n">split_dataset_and_plot_objective_interactively</span><span class="p">(</span><span class="n">positives</span><span class="p">,</span> <span class="n">num_positives</span><span class="p">,</span> <span class="n">negatives</span><span class="p">,</span> <span class="n">num_negatives</span><span class="p">)</span>
+<span class="n">interactive_plot2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training_inputs</span><span class="p">,</span> <span class="n">training_targets</span><span class="p">,</span> <span class="n">num_training_examples</span><span class="p">,</span> <span class="n">num_training_positives</span><span class="p">,</span> <span class="n">num_training_negatives</span><span class="p">,</span> \
+           <span class="n">validation_inputs</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">,</span> <span class="n">num_validation_examples</span><span class="p">,</span> <span class="n">num_validation_positives</span><span class="p">,</span> <span class="n">num_validation_negatives</span><span class="p">,</span> \
+           <span class="n">test_inputs</span><span class="p">,</span> <span class="n">test_targets</span><span class="p">,</span> <span class="n">num_test_examples</span><span class="p">,</span> <span class="n">num_test_positives</span><span class="p">,</span> <span class="n">num_test_negatives</span><span class="p">,</span> <span class="n">param1_meshgrid_values</span><span class="p">,</span> \
+           <span class="n">param2_meshgrid_values</span><span class="p">,</span> <span class="n">training_costs_on_meshgrid</span><span class="p">,</span> <span class="n">validation_costs_on_meshgrid</span> <span class="o">=</span> <span class="n">interactive_plot2</span><span class="o">.</span><span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Answer<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-3-optimization-of-model-parameter-values">
+<h2>Task 3: Optimization of model parameter values<a class="headerlink" href="#task-3-optimization-of-model-parameter-values" title="Permalink to this headline">¶</a></h2>
+<p>Executing the cell below creates an interactive plot to optimize model parameters.</p>
+<p>The model parameters <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span> are updated using <em>stochastic</em> gradient descent (with momentum) on the negative log-likelihood of the training data. At each parameter update, the true gradient is estimated using a mini-batch of the (training) data instead of calculated with the full (training) dataset; hence <em>stochastic</em>. Best model parameters in the optimization here are in fact not decided based on the negative log-likelihood, but based on a different metric (which is typical), classification accuracy for simplicity; the metric is non-differentiable and we cannot use gradient-based optimization for directly optimizing it as is the case with the negative log-likelihood objective here. The threshold <span class="math notranslate nohighlight">\(T\)</span> for the classification assuming specific model parameter values, is obtained by considering various threshold values in classification and selecting the one with which maximizes the classification accuracy, on the validation set; the calculation is done at every iteration, for the updated parameter values.</p>
+<p>The configuration of model parameter values <span class="math notranslate nohighlight">\((\theta_1, \theta_2)\)</span> that one obtains using the optimization scheme are
+the ones in the SGD (+momentum) iterative update process that resulted in the highest value of the classification accuracy.</p>
+<p>Properties that can be changed in the optimization:</p>
+<ul class="simple">
+<li><p>initial_parameter_values: the initial parameter values; keep the initial ones for your final results</p></li>
+<li><p>num_iterations: amount of SGD (with momentum) iterations</p></li>
+<li><p>minibatch_size: amount of examples in a minibatch of data; this is used to calculate the gradient estimate</p></li>
+<li><p>stratified_minibatch: if checked, then each minibatch of data assumes (roughly) equal amount of positives and negatives; otherwise sampling of the examples from the training data to the minibatch ignores the class and the class rates vary across different minibatches of data.</p></li>
+<li><p>learning_rate: the learning rate</p></li>
+<li><p>momentum_rate: the momentum rate</p></li>
+</ul>
+<p>Press the ‘Run Interact’-button to run the optimization; different runs with same interaction parameter values (are expected to) result in different outcomes due to the stochasticity in the minibatch sampling. Study the effect of the interaction parameter values. Try then to the find such values for which you obtain good training and validation data classification (assuming your the data), and ideally also in terms of the negative log-likelihood on the training and validation data. The current best parameter values (assuming our validation data classification accuracy criterion) are highlighted with a green cross in the contour-plots on the right. Aim to land the final green crosses near the inner-most contours, like inside. Also, try to get a stable update process.
+Once done, execute the cell below the plots to get the obtained model parameter values from the interactive plot instance.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell i) how does the effect of changing the minibatch size can be seen from the plots, ii) observations on the process of adjusting the interaction parameter values to get to the target, and iii)
+the parameter values that you chose.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot3</span> <span class="o">=</span> <span class="n">create_interactive_training_plot</span><span class="p">(</span><span class="n">param1_meshgrid_values</span><span class="p">,</span> <span class="n">param2_meshgrid_values</span><span class="p">,</span> <span class="n">training_costs_on_meshgrid</span><span class="p">,</span>
+                   <span class="n">validation_costs_on_meshgrid</span><span class="p">,</span> <span class="n">training_inputs</span><span class="p">,</span> <span class="n">training_targets</span><span class="p">,</span> <span class="n">num_training_examples</span><span class="p">,</span>
+                   <span class="n">num_training_positives</span><span class="p">,</span> <span class="n">num_training_negatives</span><span class="p">,</span> <span class="n">validation_inputs</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">,</span>
+                   <span class="n">num_validation_examples</span><span class="p">)</span>
+<span class="n">interactive_plot3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parameter_values</span><span class="p">,</span> <span class="n">probability_threshold</span> <span class="o">=</span> <span class="n">interactive_plot3</span><span class="o">.</span><span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">parameter_values</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">probability_threshold</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Answer<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-4-model-testing-and-tweaking">
+<h2>Task 4: Model testing (and tweaking)<a class="headerlink" href="#task-4-model-testing-and-tweaking" title="Permalink to this headline">¶</a></h2>
+<p>Executing the cell below calculates classification accuracies with the obtained model parameters and the associated probability
+threshold for prediction.</p>
+<p>Executing the cell below it, creates an interactive plot to study the effect of changing the probability threshold (<span class="math notranslate nohighlight">\(T\)</span>) in classifying validation data.</p>
+<p>Executing the cell further below recalculates the classification accuracies with the probability threshold chosen in the interactive plot.</p>
+<p>Vary the probability threshold (utilizing the interactive plot) and observe the effects; the model should be run on the test set in practice only once, but here we can do a bit of studying for understanding the behaviour on the test data as well.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell i) the effect of changing the probability threshold (to the model and to the predictions), ii) does the threshold need to be adjusted to get no false negatives (so no positive example is classified as negative, and so no triangles with blue fill and black border) under the validation data and if so, what is the effect of the adjustment to the classification accuracies, iii) original and chosen probability threshold.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calculate_classification_accuracies</span><span class="p">(</span><span class="n">parameter_values</span><span class="p">,</span> <span class="n">probability_threshold</span><span class="p">,</span> <span class="n">training_inputs</span><span class="p">,</span> <span class="n">training_targets</span><span class="p">,</span>
+                                        <span class="n">validation_inputs</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">,</span> <span class="n">test_inputs</span><span class="p">,</span> <span class="n">test_targets</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot4</span> <span class="o">=</span> <span class="n">create_interactive_inference_plot</span><span class="p">(</span><span class="n">validation_inputs</span><span class="p">,</span> <span class="n">parameter_values</span><span class="p">,</span> <span class="n">probability_threshold</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">)</span>
+<span class="n">interactive_plot4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">updated_probability_threshold</span> <span class="o">=</span> <span class="n">interactive_plot4</span><span class="o">.</span><span class="n">result</span>
+<span class="n">calculate_classification_accuracies</span><span class="p">(</span><span class="n">parameter_values</span><span class="p">,</span> <span class="n">updated_probability_threshold</span><span class="p">,</span> <span class="n">training_inputs</span><span class="p">,</span> <span class="n">training_targets</span><span class="p">,</span>
+                                        <span class="n">validation_inputs</span><span class="p">,</span> <span class="n">validation_targets</span><span class="p">,</span> <span class="n">test_inputs</span><span class="p">,</span> <span class="n">test_targets</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Answer<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="exercises-optimization.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exercise tasks: Optimization</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By LUMA-team, Lapland UAS / Jyri Kivinen<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

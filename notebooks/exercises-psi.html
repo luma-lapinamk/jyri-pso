@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises: Probability, statistics, and information theory &#8212; Probability, Statistics, and Optimization</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercise tasks: Optimization" href="exercises-optimization.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Probability, Statistics, and Optimization</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Probability, statistics, and information theory
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exercises: Probability, statistics, and information theory
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Optimization
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises-optimization.html">
+   Exercise tasks: Optimization
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercises-analysis.html">
+   Exercises: Analysis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/exercises-psi.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/luma-lapinamk/jyri-pso"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/luma-lapinamk/jyri-pso/blob/master/notebooks/exercises-psi.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercises: Probability, statistics, and information theory
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-0-get-and-import-needed-helper-code">
+     Task 0: get and import needed helper code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#univariate-data">
+   Univariate data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1-specifying-a-univariate-gaussian">
+     Task 1: Specifying a univariate Gaussian
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2-sampling-from-the-distribution">
+     Task 2: Sampling from the distribution
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3-estimating-true-parameter-values-based-on-data-samples">
+     Task 3: Estimating true parameter values based on data samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariate-data">
+   Multivariate data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4-specifying-a-multivariate-gaussian">
+     Task 4: Specifying a multivariate Gaussian
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-5-sampling-from-the-distribution-and-estimating-true-parameter-values-based-on-the-samples">
+     Task 5: Sampling from the distribution and estimating true parameter values based on the samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exercises: Probability, statistics, and information theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercises: Probability, statistics, and information theory
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-0-get-and-import-needed-helper-code">
+     Task 0: get and import needed helper code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#univariate-data">
+   Univariate data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1-specifying-a-univariate-gaussian">
+     Task 1: Specifying a univariate Gaussian
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2-sampling-from-the-distribution">
+     Task 2: Sampling from the distribution
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3-estimating-true-parameter-values-based-on-data-samples">
+     Task 3: Estimating true parameter values based on data samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multivariate-data">
+   Multivariate data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4-specifying-a-multivariate-gaussian">
+     Task 4: Specifying a multivariate Gaussian
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-5-sampling-from-the-distribution-and-estimating-true-parameter-values-based-on-the-samples">
+     Task 5: Sampling from the distribution and estimating true parameter values based on the samples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Answer
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="exercises-probability-statistics-and-information-theory">
+<h1>Exercises: Probability, statistics, and information theory<a class="headerlink" href="#exercises-probability-statistics-and-information-theory" title="Permalink to this headline">¶</a></h1>
+<p>Instructions: Use Google Colab to run the notebook; click the rocket-icon and choose Colab. Submit the completed notebook as instructed in the course.</p>
+<div class="section" id="task-0-get-and-import-needed-helper-code">
+<h2>Task 0: get and import needed helper code<a class="headerlink" href="#task-0-get-and-import-needed-helper-code" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone https://github.com/luma-lapinamk/jyri-pso.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;/jyri-pso/code&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">helpers_psi</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="univariate-data">
+<h1>Univariate data<a class="headerlink" href="#univariate-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="task-1-specifying-a-univariate-gaussian">
+<h2>Task 1: Specifying a univariate Gaussian<a class="headerlink" href="#task-1-specifying-a-univariate-gaussian" title="Permalink to this headline">¶</a></h2>
+<p>The code in the cell below creates plot of a probability density function (pdf) of a
+univariate Gaussian whose parameter values can be (re)set interactively.</p>
+<p>Play with setting the parameter values, and select parameter values that are different from the default ones.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell i) what do the parameters mean/control, ii) how does changing them can be seen from the plot, and iii) what parameter values did you choose</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">plot_and_specify_univariate_gaussian_interactively</span><span class="p">()</span>
+<span class="n">interactive_plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">__</span> <span class="o">=</span> <span class="n">interactive_plot</span><span class="o">.</span><span class="n">result</span> <span class="c1"># extracts the parameter values from the interactive plot instance </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="answer">
+<h3>Answer<a class="headerlink" href="#answer" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-2-sampling-from-the-distribution">
+<h2>Task 2: Sampling from the distribution<a class="headerlink" href="#task-2-sampling-from-the-distribution" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s draw a bunch of samples from the distribution and look what kind of values did we get out.</p>
+<p>The following cell i) draws samples from the distribution, ii) calculates a normalized histogram of the samples (to get an approximate representation of the density of the sample values), iii) plots the distribution we are sampling from (in blue) and the obtained normalized histogram (in magenta with a bar plot and in cyan using a curve).</p>
+<p>Play with the values of the variables ‘num_samples’ (default is 10) and ‘num_bins’ (default is 10).</p>
+<p>Change their values so that the match between the blue coloured curve (true density) and the cyan coloured curve (density representation of samples via a normalized histogram) is improved, ideally good.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell how did you change the parameter values and why did they result in a better result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sample from the distribution</span>
+<span class="n">num_samples</span> <span class="o">=</span> <span class="mi">10</span> 
+<span class="n">samples</span> <span class="o">=</span> <span class="n">mu</span><span class="o">+</span><span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">num_samples</span><span class="p">)</span>
+
+<span class="c1"># get an approximate representation of the density </span>
+<span class="n">num_bins</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">bin_centers</span><span class="p">,</span> <span class="n">normalized_bin_counts</span> <span class="o">=</span> <span class="n">histogram_estimation_of_univariate_data_density</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">nbins</span><span class="o">=</span><span class="n">num_bins</span><span class="p">)</span>
+
+<span class="c1"># plot the true density and the histogram based approximate density</span>
+<span class="n">_</span><span class="p">,</span><span class="n">__</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot_univariate_gaussian_pdf</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bin_centers</span><span class="p">,</span> <span class="n">normalized_bin_counts</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">bin_centers</span><span class="p">,</span> <span class="n">normalized_bin_counts</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">20.</span><span class="o">/</span><span class="n">num_bins</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;magenta&#39;</span><span class="p">,</span> 
+       <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span> <span class="k">if</span> <span class="n">num_bins</span><span class="o">&lt;=</span> <span class="mi">100</span> <span class="k">else</span> <span class="s1">&#39;magenta&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;True density vs. normalized histogram of samples&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Answer<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-3-estimating-true-parameter-values-based-on-data-samples">
+<h2>Task 3: Estimating true parameter values based on data samples<a class="headerlink" href="#task-3-estimating-true-parameter-values-based-on-data-samples" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s estimate true parameter values of the distribution, from a set of samples from the true distribution. Let us do that for a varying amount of samples, and let us also assess estimation effectiveness for each case. Let us assess the effectiveness by comparing true and estimated parameter values, and the KL-divergence between the true and the estimated distribution.</p>
+<p>Codes for doing all of that is provided in the cell below. Your task is to replace
+the parameter estimators to be better ones, ideally the best ones; there are two lines
+of code that you should change, one starting with ‘mu_estimate = ‘ and the other starting
+with ‘sigma_estimate = ‘, the ones between the two lines containing comment ‘CHANGE CODE’.</p>
+<p>In the ‘Answer’-section, briefly describe i) your changes, ii) how and why did the results improve, and iii) the dependency on the estimation effectiveness to the amount of samples used when considering the improved approach.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_samples_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="o">**</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">num_samples_cases</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">)</span>
+<span class="n">mu_estimates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">num_samples_cases</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">sigma_estimates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">num_samples_cases</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">kl_divergences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">num_samples_cases</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="c1"># get samples, estimate parameters, assess effectiveness: </span>
+<span class="c1"># loop over the varying case of differing amount of samples</span>
+<span class="c1"># ----------------------------------------------------------</span>
+
+<span class="k">for</span> <span class="n">num_samples_case_index</span><span class="p">,</span> <span class="n">num_samples</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">):</span>
+    <span class="c1"># sample from the distribution</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">mu</span><span class="o">+</span><span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">num_samples</span><span class="p">)</span>
+    
+    <span class="c1"># estimate parameter values from the distribution</span>
+    <span class="c1">###########################################################################</span>
+    <span class="c1"># ----------&gt; CHANGE CODE: IMPROVE THE ESTIMATORS, IF IMPROVING IS POSSIBLE</span>
+    <span class="n">mu_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">+</span><span class="n">samples</span><span class="o">.</span><span class="n">max</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span> 
+    <span class="n">sigma_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">samples</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">samples</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">/</span><span class="mi">2</span> 
+    <span class="c1"># &lt; --------- CHANGE CODE </span>
+    <span class="c1">###########################################################################</span>
+    
+    <span class="c1"># calculate KL-divergence between true and estimated distribution</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">kl_divergence_between_two_univariate_gaussians</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">mu_estimate</span><span class="p">,</span> <span class="n">sigma_estimate</span><span class="p">)</span>
+    
+    <span class="c1"># record the obtained parameter values and the KL-divergence</span>
+    <span class="n">mu_estimates</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">mu_estimate</span>
+    <span class="n">sigma_estimates</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">sigma_estimate</span>
+    <span class="n">kl_divergences</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">kl_div</span>
+    
+<span class="c1"># plot results</span>
+<span class="c1"># -------------</span>
+<span class="c1"># create figure infrastructure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;height_ratios&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]})</span>
+
+<span class="c1"># plot mu vs mu_estimated</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">),</span> <span class="n">mu_estimates</span><span class="p">);</span> <span class="n">xlim</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mu$ vs. $\hat{\mu}$&#39;</span><span class="p">);</span> <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;amount of samples&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot sigma vs sigma_estimated</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">),</span> <span class="n">sigma_estimates</span><span class="p">);</span> <span class="n">xlim</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">sigma</span><span class="p">,</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\sigma$ vs. $\hat{\sigma}$&#39;</span><span class="p">);</span> <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;amount of samples&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot KL-divergence (p_true || p_estimated)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">),</span> <span class="n">kl_divergences</span><span class="p">);</span> <span class="n">xlim</span> <span class="o">=</span> <span class="n">ax3</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$D_</span><span class="si">{KL}</span><span class="s1">\left(\mathcal</span><span class="si">{N}</span><span class="s1">(\mu, \sigma) \|| \mathcal</span><span class="si">{N}</span><span class="s1">(\hat{\mu}, \hat{\sigma})\right)$&#39;</span><span class="p">)</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;amount of samples&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Answer<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="multivariate-data">
+<h1>Multivariate data<a class="headerlink" href="#multivariate-data" title="Permalink to this headline">¶</a></h1>
+<p>Similar as above, but for multivariate (bivariate) data.</p>
+<div class="section" id="task-4-specifying-a-multivariate-gaussian">
+<h2>Task 4: Specifying a multivariate Gaussian<a class="headerlink" href="#task-4-specifying-a-multivariate-gaussian" title="Permalink to this headline">¶</a></h2>
+<p>The code in the cell below creates a plot of a probability density function (pdf) of a
+bivariate Gaussian whose parameter values can be (re)set interactively.</p>
+<p>Play with setting the parameter values, and select parameter values that are different from the default ones.</p>
+<p>In the ‘Answer’-section, briefly describe in the empty cell i) what do the parameters mean/control, ii) how does changing them can be seen from the plot, and iii) what parameter values did you choose</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">plot_and_specify_bivariate_gaussian_interactively</span><span class="p">()</span>
+<span class="n">interactive_plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">__</span> <span class="o">=</span> <span class="n">interactive_plot</span><span class="o">.</span><span class="n">result</span> <span class="c1"># extracts the parameter values from the interactive plot instance </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Answer<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+<div class="section" id="task-5-sampling-from-the-distribution-and-estimating-true-parameter-values-based-on-the-samples">
+<h2>Task 5: Sampling from the distribution and estimating true parameter values based on the samples<a class="headerlink" href="#task-5-sampling-from-the-distribution-and-estimating-true-parameter-values-based-on-the-samples" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s draw a bunch of samples from the (chosen) distribution, and based on them, let’s estimate the true parameter values of the distribution. Let us do that for a varying amount of samples, and let us also assess estimation effectiveness for each case. Let us assess the effectiveness by comparing the true and estimated parameter values, and the KL-divergence between the true and the estimated distribution.</p>
+<p>Codes for doing all of that is provided in the cell below. Your task is to replace
+the parameter estimators to be better ones, ideally the best ones; there are two lines
+of code that you should change, one starting with ‘mu_estimate = ‘ and the other starting
+with ‘K_estimate = ‘, the ones between the two lines containing comment ‘CHANGE CODE’.</p>
+<p>In the ‘Answer’-section, briefly describe i) your changes, ii) how and why did the results improve, and iii) the dependency on the estimation effectiveness to the amount of samples used when considering the improved approach.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_samples_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="o">**</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">num_samples_cases</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">)</span>
+<span class="n">mu_estimates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">num_samples_cases</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">kl_divergences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">num_samples_cases</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="c1"># get samples, estimate parameters, assess effectiveness: </span>
+<span class="c1"># loop over the varying case of differing amount of samples</span>
+<span class="c1"># ----------------------------------------------------------</span>
+
+<span class="k">for</span> <span class="n">num_samples_case_index</span><span class="p">,</span> <span class="n">num_samples</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">):</span>
+    <span class="c1"># sample from the distribution</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">cov</span><span class="o">=</span><span class="n">K</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">num_samples</span><span class="p">)</span>
+    
+    <span class="c1"># estimate parameter values from the distribution</span>
+    <span class="c1">###########################################################################</span>
+    <span class="c1"># ----------&gt; CHANGE CODE: IMPROVE THE ESTIMATORS, IF IMPROVING IS POSSIBLE</span>
+    <span class="n">mu_estimate</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> 
+    <span class="n">K_estimate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">samples</span><span class="p">[:])</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># np.diag(np.var(samples, axis=0))</span>
+    <span class="c1"># &lt; --------- CHANGE CODE </span>
+    <span class="c1">###########################################################################</span>
+    
+    <span class="c1"># calculate KL-divergence between the true and estimated distribution</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">kl_divergence_between_two_multivariate_gaussians</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">mu_estimate</span><span class="p">,</span> <span class="n">K_estimate</span><span class="p">)</span>
+    
+    <span class="c1"># record the obtained parameter values, the KL-divergence, and the normalized log-likelihood</span>
+    <span class="n">mu_estimates</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">mu_estimate</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">kl_divergences</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">kl_div</span>
+    
+<span class="c1"># plot results</span>
+<span class="c1"># -------------</span>
+
+<span class="c1"># create figure infrastructure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;height_ratios&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]})</span>
+
+<span class="c1"># plot mu vs mu_estimated</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mu_estimates</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">mu_estimates</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated&#39;</span><span class="p">)</span> 
+<span class="k">for</span> <span class="n">num_samples_case_index</span><span class="p">,</span> <span class="n">num_samples</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">):</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">mu_estimates</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">mu_estimates</span><span class="p">[</span><span class="n">num_samples_case_index</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_samples</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mu</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">mu</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x_1$&#39;</span><span class="p">);</span> <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$x_2$&#39;</span><span class="p">)</span> 
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\mu$ vs. $\hat{\mu}$&#39;</span><span class="p">);</span> <span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># plot KL-divergence (p_true || p_estimated)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">num_samples_list</span><span class="p">),</span> <span class="n">kl_divergences</span><span class="p">);</span> <span class="n">xlim</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;KL-divergence $D_</span><span class="si">{KL}</span><span class="s1">\left(\mathcal</span><span class="si">{N}</span><span class="s1">(\mu, \Sigma) \|| \mathcal</span><span class="si">{N}</span><span class="s1">(\hat{\mu}, \hat{\Sigma})\right)$&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;amount of samples&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Answer<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Input your answers to the cell below.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="exercises-optimization.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise tasks: Optimization</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By LUMA-team, Lapland UAS / Jyri Kivinen<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
