@@ -495,7 +495,7 @@ onto class ‘positive’ (<span class="math notranslate nohighlight">\(Y=1\)</s
 <li><p>‘positive’: <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2)\geq T\)</span>,</p></li>
 <li><p>‘negative’: <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2) &lt; T\)</span>,</p></li>
 </ul>
-<p>where <span class="math notranslate nohighlight">\(p(Y=y | x_1, x_2, \theta_1, \theta_2) = \rm{Bernoulli}(y; \text{logistic_sigmoid}\left(-\theta_1 x_1-\theta_2 x_2 \right))\)</span>,
+<p>where <span class="math notranslate nohighlight">\(p(Y=y | x_1, x_2, \theta_1, \theta_2) = \rm{Bernoulli}(y; \text{logistic_sigmoid}\left(\theta_1 x_1+\theta_2 x_2 \right))\)</span>,
 and so <span class="math notranslate nohighlight">\(p(Y=1 | x_1, x_2, \theta_1, \theta_2)=\left(1+\exp{\left(-\theta_1 x_1-\theta_2 x_2 \right)}\right)^{-1}\)</span>.</p>
 <p>The decision boundary can be then mathematically expressed with the equation <span class="math notranslate nohighlight">\(\left(1+\exp{\left(-\theta_1 x_1-\theta_2 x_2 \right)}\right)^{-1}=T\)</span>, where the classification threshold <span class="math notranslate nohighlight">\(T\in (0, 1)\)</span>.</p>
 <p>With a bit of algebra, we can obtain that <span class="math notranslate nohighlight">\(
